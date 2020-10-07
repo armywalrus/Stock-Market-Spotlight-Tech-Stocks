@@ -26,13 +26,19 @@ This project will be created with:
 * Tokyo Stock exchange(TYO),
 * London Stock Exchange (LSE)
 
+<a href="https://github.com/armywalrus/Stock-Market-Spotlight-Tech-Stocks/blob/main/All%20Stocks.csv">Data</a>
+
 ## Visualizations
 
 Inspiration:
-![AACAF](Images/AACAF.png) 
-![AAPL](Images/AAPL.png) 
-![MSFT](Images/MSFT.png) 
-![GOOG](Images/GOOG.png) 
+Tech Stock #1:
+![AACAF](Images/AACAF.png)
+Tech Stock #2:
+![AAPL](Images/AAPL.png)
+Tech Stock #3:
+![MSFT](Images/MSFT.png)
+Tech Stock #4:
+![GOOG](Images/GOOG.png)
 
 * Stock Price (line)
 * *% Growth
