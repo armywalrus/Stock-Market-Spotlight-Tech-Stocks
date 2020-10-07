@@ -35,11 +35,11 @@ Inspiration:
 
 ![AACAF](Images/AACAF.png)
 
-![AAPL](Images/AAPL.png)
+![AAPL](Images/AAPL.PNG)
 
-![MSFT](Images/MSFT.png)
+![MSFT](Images/MSFT.PNG)
 
-![GOOG](Images/GOOG.png)
+![GOOG](Images/GOOG.PNG)
 
 * Stock Price (line)
 * *% Growth
