@@ -31,13 +31,13 @@ This project will be created with:
 ## Visualizations
 
 Inspiration:
-Tech Stock #1:
+
 ![AACAF](Images/AACAF.png)
-Tech Stock #2:
+
 ![AAPL](Images/AAPL.png)
-Tech Stock #3:
+
 ![MSFT](Images/MSFT.png)
-Tech Stock #4:
+
 ![GOOG](Images/GOOG.png)
 
 * Stock Price (line)
