@@ -25,15 +25,14 @@ This project will be created with:
 * New York Stock (NYSE)dataset
 * Tokyo Stock exchange(TYO),
 * London Stock Exchange (LSE)
-[data](All Stocks.csv)
 
 ## Visualizations
 
 Inspiration:
-![AACAF](AACAF.png)
-![AAPL](AAPL.png)
-![MSFT](MSFT.png)
-![GOOG](GOOG.png)
+![AACAF](Images/AACAF.png)
+![AAPL](Images/AAPL.png)
+![MSFT](Images/MSFT.png)
+![GOOG](Images/GOOG.png)
 
 * Stock Price (line)
 * *% Growth
