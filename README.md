@@ -1,6 +1,6 @@
 ### Project Title
 ## Stock Market Spotlight: Tech Stocks
-<a href="https://github.com/armywalrus/Stock-Market-Spotlight-Tech-Stocks.git" Repo</a>
+<a href="https://github.com/armywalrus/Stock-Market-Spotlight-Tech-Stocks.git">Repo</a>
 
 ## Team Members
 Zach Herington
