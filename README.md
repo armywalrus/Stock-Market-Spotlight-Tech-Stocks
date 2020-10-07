@@ -30,6 +30,9 @@ This project will be created with:
 
 Inspiration:
 ![AACAF](AACAF.png)
+![AAPL](AAPL.png)
+![MSFT](MSFT.png)
+![GOOG](GOOG.png)
 
 * Stock Price (line)
 * *% Growth
