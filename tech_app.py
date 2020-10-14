@@ -5,9 +5,15 @@ from flask import Flask, jsonify
 import csv
 import database
 
+import pymongo
+
+# client = pymongo.MongoClient("mongodb+srv://project_staff:walrus@cluster0.i8w5c.mongodb.net/test?retryWrites=true&w=majority")
+# db = client.test
+
+
 app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'tech_stocks'
-app.config["MONGO_URI"] = "mongodb://localhost:27017/tech_stocks"
+app.config["MONGO_URI"] = "mongodb+srv://project_staff:walrus@cluster0.i8w5c.mongodb.net/test?retryWrites=true&w=majority"
 mongo = PyMongo(app)
 
 @app.route("/tech_stocks")
