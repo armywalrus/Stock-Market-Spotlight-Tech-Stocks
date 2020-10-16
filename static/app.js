@@ -88,7 +88,7 @@ function UpdateChart1(chosen_s1){
 
         var layout1 = {
           title: `NYSE Tech Stock: ${chosen_s1}`,
-          color: 'red',
+          color: "#870814",
           yaxis: {
             autorange: true,
           },
@@ -147,15 +147,14 @@ function UpdateChart2(chosen_s2){
   d3.json(url, function(data){
 
     // console.log(data.result);
+    var SE2_stockdata =[]
+    var close_price2 = []
 
     data.result.forEach(function(row){
       if (row["Stock Ticker"] === chosen_s2){
-        
-        /// Below was my attempt to format the data !!NOT WORKING!!///
-        var SE2_stockdata =[]
-        SE2_stockdata.push(new Date(row.Date));
 
-        var close_price2 = []
+        /// Below was my attempt to format the data !!NOT WORKING!!///
+        SE2_stockdata.push(new Date(row.Date));
         close_price2.push(parseFloat(row.Close));
 
         // console.log(dates)
@@ -231,9 +230,11 @@ SE3_Change();
 
 
 ////////////////////////////////////////////
-// LSE Chart Update (SE3) //
+// OTC Chart Update (SE3) //
 function UpdateChart3(chosen_s3){
   d3.json(url, function(data){
+    var SE3_stockdata =[]
+    var close_price3 = []
 
     // console.log(data.result);
 
@@ -241,10 +242,7 @@ function UpdateChart3(chosen_s3){
       if (row["Stock Ticker"] === chosen_s3){
         
         /// Below was my attempt to format the data !!NOT WORKING!!///
-        var SE3_stockdata =[]
         SE3_stockdata.push(new Date(row.Date));
-
-        var close_price3 = []
         close_price3.push(parseFloat(row.Close));
 
         // console.log(dates)
