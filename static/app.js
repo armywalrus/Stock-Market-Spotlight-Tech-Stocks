@@ -138,8 +138,8 @@ function SE2_Change(){
   var chosen_s2 = d3.select("#selDataset2").node().value;
   console.log(chosen_s2)
 
-  // Call the "UpdateCharts" Function with "chosen_s1" //
-  UpdateChart1(chosen_s2);
+  // Call the "UpdateCharts" Function with "chosen_s2" //
+  UpdateChart2(chosen_s2);
   
   
 }
@@ -188,14 +188,14 @@ function UpdateChart2(chosen_s2){
         var barchart2 = [trace2];
 
         var layout2 = {
-            title: `LSE Tech Stock: ${chosen_s3}`,
-            yaxis: {
-              autorange: true,
-            },
-            xaxis: {
-              autorange: true,
-            },
-          };
+        title: `LSE Tech Stock: ${chosen_s2}`,
+        yaxis: {
+            autorange: true,
+        },
+        xaxis: {
+            autorange: true,
+        },
+        };
           // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
         Plotly.newPlot("bar", barchart2, layout2);
         
@@ -301,44 +301,187 @@ function UpdateChart3(chosen_s3){
 //////////////////////////////////////////////
 
 // ChartJS
-
-
+// Open Price
 new Chart(document.getElementById("line-chart"), {
     type: 'line',
     data: {
-      labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+      labels: [150,160,170,175,180,185,190,195,199,205],
       datasets: [{ 
-          data: [86,114,106,106,107,111,133,221,783,2478],
-          label: "Africa",
+          data: [64, 64, 62, 103, 66, 129, 71, 119, 57, 120],
+          label: "AAPL",
           borderColor: "#3e95cd",
           fill: false
         }, { 
-          data: [282,350,411,502,635,809,947,1402,3700,5267],
-          label: "Asia",
-          borderColor: "#8e5ea2",
+          data: [1431, 1096, 1057, 1126, 1126, 1061, 1608, 1457, 1093, 1341],
+          label: "GOOG",
+          borderColor: "#145A32",
           fill: false
         }, { 
-          data: [168,170,178,190,203,276,408,547,675,734],
-          label: "Europe",
-          borderColor: "#3cba9f",
+          data: [152, 145, 163, 148, 140, 143, 146, 144, 138, 140],
+          label: "MSFT",
+          borderColor: "#283747",
           fill: false
         }, { 
-          data: [40,20,10,16,24,38,74,167,508,784],
-          label: "Latin America",
+          data: [438, 277, 396, 437, 442, 417, 913, 439, 520, 369],
+          label: "MCRO.L",
+          borderColor: "#F7DC6F",
+          fill: false
+        }, { 
+          data: [680, 634, 746, 602, 699, 526, 690, 556, 635, 577],
+          label: "SGE.L",
+          borderColor: "#F5B041",
+          fill: false
+        }, { 
+          data: [140, 102, 104, 126, 120, 112, 161, 112, 156, 114],
+          label: "VOD.L",
+          borderColor: "#BA4A00",
+          fill: false
+          }, { 
+          data: [5.58, 5.58, 5.58, 5.58, 5.58, 5.58, 5.81, 5.81, 5.81, 6.15],
+          label: "AACAF",
           borderColor: "#e8c3b9",
           fill: false
-        }, { 
-          data: [6,3,2,2,7,26,82,172,312,433],
-          label: "North America",
-          borderColor: "#c45850",
+          }, { 
+          data: [17,11,15,22,15,17,18,17,15,22],
+          label: "IFNNY",
+          borderColor: "#C39BD3",
           fill: false
-        }
+          }, { 
+          data: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7],
+          label: "TTNDF",
+          borderColor: "#A3E4D7",
+          fill: false
+          }
       ]
     },
     options: {
       title: {
         display: true,
-        text: 'World population per region (in millions)'
+        text: 'Open Price by Stock'
       }
     }
   });
+
+  // Close Price
+new Chart(document.getElementById("line-chart_two"), {
+    type: 'line',
+    data: {
+      labels: [150,160,170,175,180,185,190,195,199,205],
+      datasets: [{ 
+          data: [68, 62, 57, 106, 69, 126, 75, 124, 56, 121],
+          label: "AAPL",
+          borderColor: "#3e95cd",
+          fill: false
+        }, { 
+          data: [1433, 1152, 1107, 1194, 1149, 1071, 1659, 1470, 1131, 1360],
+          label: "GOOG",
+          borderColor: "#145A32",
+          fill: false
+        }, { 
+          data: [164, 153, 167, 162, 149, 150, 147, 150, 146, 148],
+          label: "MSFT",
+          borderColor: "#283747",
+          fill: false
+        }, { 
+          data: [443, 280, 453, 442, 464, 417, 925, 462, 535, 420],
+          label: "MCRO.L",
+          borderColor: "#F7DC6F",
+          fill: false
+        }, { 
+          data: [692, 638, 750, 605, 727, 556, 698, 566, 649, 614],
+          label: "SGE.L",
+          borderColor: "#F5B041",
+          fill: false
+        }, { 
+          data: [140, 102, 114, 126, 121, 112, 161, 123, 156, 115],
+          label: "VOD.L",
+          borderColor: "#BA4A00",
+          fill: false
+          }, { 
+          data: [5.58, 5.58, 5.58, 5.58, 5.58, 5.58, 5.81, 5.81, 5.81, 6.15],
+          label: "AACAF",
+          borderColor: "#e8c3b9",
+          fill: false
+          }, { 
+          data: [18,12,16,22,15,17,18,17,15,22],
+          label: "IFNNY",
+          borderColor: "#C39BD3",
+          fill: false
+          }, { 
+          data: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7],
+          label: "TTNDF",
+          borderColor: "#A3E4D7",
+          fill: false
+          }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Close Price by Stock'
+      }
+    }
+  });
+
+
+
+// var ctx = document.getElementById("myChart").getContext("2d");
+// var myChart = new Chart(ctx).Line(data);
+
+// var data = {
+//     labels: ["January", "February", "March", "April", "May", "June", "July"],
+//     datasets: [
+//       {
+//         label: "My First dataset",
+//         fillColor: "rgba(220,220,220,0.2)",
+//         strokeColor: "rgba(220,220,220,1)",
+//         pointColor: "rgba(220,220,220,1)",
+//         pointStrokeColor: "#fff",
+//         pointHighlightFill: "#fff",
+//         pointHighlightStroke: "rgba(220,220,220,1)",
+//         data: [65, 59, 80, 81, 56, 55, 40]
+//       },
+//       {
+//         label: "My Second dataset",
+//         fillColor: "rgba(151,187,205,0.2)",
+//         strokeColor: "rgba(151,187,205,1)",
+//         pointColor: "rgba(151,187,205,1)",
+//         pointStrokeColor: "#fff",
+//         pointHighlightFill: "#fff",
+//         pointHighlightStroke: "rgba(151,187,205,1)",
+//         data: [28, 48, 40, 19, 86, 27, 90]
+//       }
+//     ]
+//   };
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// d3.json(url, function(data){
+ 
+//     var labels = data.jsonarray.map(function(e) {
+//         return e.Date;
+//     });
+//     var data = data.jsonarray.map(function(e) {
+//         return e.Close;
+//     });;
+    
+//     var ctx = canvas.getContext('2d');
+//     var config = {
+//         type: 'line',
+//         data: {
+//         labels: labels,
+//         datasets: [{
+//             label: 'Graph Line',
+//             data: data,
+//             backgroundColor: 'rgba(0, 119, 204, 0.3)'
+//         }]
+//         }
+//     };
+ 
+//  var chart = new Chart(ctx, config);
+
+///////////////////////////////////////////////////////////////////////////////////
+
