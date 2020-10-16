@@ -4,14 +4,14 @@ const url = "http://127.0.0.1:5000/tech_stocks";
 
 
 
-//////////////////////////////////////////////
+////////////////////////////////////////////
 // NYSE Stock Select (SE1) //
 function SE1_Change(){
   d3.json(url, function(data){
+  
+    console.log(data);
 
     var SE1_stocks = [ "Choose a Stock", "AAPL", "GOOG", "MSFT" ]
-  
-    // console.log(SE1_stocks);
     
     d3.selectAll("#selDataset1")
       .selectAll("option")
@@ -28,8 +28,7 @@ function SE1_Change(){
 
   // Store Chosen stock for later reference //
   var chosen_s1 = d3.select("#selDataset1").node().value;
-  console.log(chosen_s1)
-
+  // console.log(chosen_s1)
   // Call the "UpdateCharts" Function with "chosen_s1" //
   UpdateChart1(chosen_s1);
   
@@ -42,17 +41,32 @@ SE1_Change();
 // NYSE Chart Update (SE1) //
 function UpdateChart1(chosen_s1){
   d3.json(url, function(data){
-
+    // columns_duplicates_to_array
     // console.log(data.result);
+    // Let current_datetime = new Date()
+    // console.log(current_datetime.toString())
+    // var chartData = data
+    // console.log(chartData)
+    // var arr =(chartData.Date)
+    // console.log(arr)
+    // var SE1_stockdata =[]
+    // SE1_stockdata.push(new Date(chartData.result.Date));
+    // // console.log(SE1_stockdata)
+    // var close_price1 = []
+    // close_price1.push(parseFloat(chartData.result.Close));
+    var SE1_stockdata =[]
+    var close_price1 = []
+
 
     data.result.forEach(function(row){
+
+
       if (row["Stock Ticker"] === chosen_s1){
         
         /// Below was my attempt to format the data !!NOT WORKING!!///
-        var SE1_stockdata =[]
-        SE1_stockdata.push(new Date(row.Date));
 
-        var close_price1 = []
+        SE1_stockdata.push(new Date(row.Date));
+        // console.log(SE1_stockdata)
         close_price1.push(parseFloat(row.Close));
 
         // console.log(dates)
@@ -74,6 +88,7 @@ function UpdateChart1(chosen_s1){
 
         var layout1 = {
           title: `NYSE Tech Stock: ${chosen_s1}`,
+          color: 'red',
           yaxis: {
             autorange: true,
           },
@@ -117,8 +132,9 @@ function SE2_Change(){
   var chosen_s2 = d3.select("#selDataset2").node().value;
   console.log(chosen_s2)
 
-  // Call the "UpdateCharts" Function with "chosen_s2" //
-  // UpdateChart2(chosen_s2);
+  // Call the "UpdateCharts" Function with "chosen_s1" //
+  UpdateChart1(chosen_s2);
+  
   
 }
 SE2_Change();
@@ -127,55 +143,55 @@ SE2_Change();
 
 //////////////////////////////////////////////
 // LSE Chart Update (SE2) //
-// function UpdateChart2(chosen_s2){
-//   d3.json(url, function(data){
+function UpdateChart2(chosen_s2){
+  d3.json(url, function(data){
 
-//     // console.log(data.result);
+    // console.log(data.result);
 
-//     data.result.forEach(function(row){
-//       if (row["Stock Ticker"] === chosen_s2){
+    data.result.forEach(function(row){
+      if (row["Stock Ticker"] === chosen_s2){
         
-//         /// Below was my attempt to format the data !!NOT WORKING!!///
-//         var SE2_stockdata =[]
-//         SE2_stockdata.push(new Date(row.Date));
+        /// Below was my attempt to format the data !!NOT WORKING!!///
+        var SE2_stockdata =[]
+        SE2_stockdata.push(new Date(row.Date));
 
-//         var close_price2 = []
-//         close_price2.push(parseFloat(row.Close));
+        var close_price2 = []
+        close_price2.push(parseFloat(row.Close));
 
-//         // console.log(dates)
-//         // console.log(close_price1)
+        // console.log(dates)
+        // console.log(close_price1)
 
-//         var trace2 = {
-//           x: SE2_stockdata,
-//           y: close_price2,
-//           type: "bar",
-//           text: close_price2,
-//           transforms: [{
-//               type: 'sort',
-//               target: 'x',
-//               order: 'ascending'
-//             }],
-//         };
+        var trace2 = {
+          x: SE2_stockdata,
+          y: close_price2,
+          type: "bar",
+          text: close_price2,
+          transforms: [{
+              type: 'sort',
+              target: 'x',
+              order: 'ascending'
+            }],
+        };
 
-//         var barchart2 = [trace2];
+        var barchart2 = [trace2];
 
-//         var layout2 = {
-//           title: `LSE Tech Stock: ${chosen_s2}`,
-//           yaxis: {
-//             autorange: true,
-//           },
-//           xaxis: {
-//             autorange: true,
-//           },
-//         };
+        var layout2 = {
+          title: `LSE Tech Stock: ${chosen_s2}`,
+          yaxis: {
+            autorange: true,
+          },
+          xaxis: {
+            autorange: true,
+          },
+        };
 
-//         // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
-//         Plotly.newPlot("bar", barchart2, layout2);
+        // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
+        Plotly.newPlot("bar", barchart2, layout2);
         
-//       }
-//     });
-//   });
-// }
+      }
+    });
+  });
+}
 //////////////////////////////////////////////
 
 
@@ -206,7 +222,7 @@ function SE3_Change(){
   console.log(chosen_s3)
 
   // Call the "UpdateCharts" Function with "chosen_s3" //
-  // UpdateChart3(chosen_s3);
+  UpdateChart3(chosen_s3);
   
 }
 SE3_Change();
@@ -214,57 +230,57 @@ SE3_Change();
 
 
 
-//////////////////////////////////////////////
-// LSE Chart Update (SE2) //
-// function UpdateChart3(chosen_s3){
-//   d3.json(url, function(data){
+////////////////////////////////////////////
+// LSE Chart Update (SE3) //
+function UpdateChart3(chosen_s3){
+  d3.json(url, function(data){
 
-//     // console.log(data.result);
+    // console.log(data.result);
 
-//     data.result.forEach(function(row){
-//       if (row["Stock Ticker"] === chosen_s3){
+    data.result.forEach(function(row){
+      if (row["Stock Ticker"] === chosen_s3){
         
-//         /// Below was my attempt to format the data !!NOT WORKING!!///
-//         var SE3_stockdata =[]
-//         SE3_stockdata.push(new Date(row.Date));
+        /// Below was my attempt to format the data !!NOT WORKING!!///
+        var SE3_stockdata =[]
+        SE3_stockdata.push(new Date(row.Date));
 
-//         var close_price3 = []
-//         close_price3.push(parseFloat(row.Close));
+        var close_price3 = []
+        close_price3.push(parseFloat(row.Close));
 
-//         // console.log(dates)
-//         // console.log(close_price1)
+        // console.log(dates)
+        // console.log(close_price1)
 
-//         var trace3 = {
-//           x: SE3_stockdata,
-//           y: close_price3,
-//           type: "bar",
-//           text: close_price3,
-//           transforms: [{
-//               type: 'sort',
-//               target: 'x',
-//               order: 'ascending'
-//             }],
-//         };
+        var trace3 = {
+          x: SE3_stockdata,
+          y: close_price3,
+          type: "bar",
+          text: close_price3,
+          transforms: [{
+              type: 'sort',
+              target: 'x',
+              order: 'ascending'
+            }],
+        };
 
-//         var barchart3 = [trace3];
+        var barchart3 = [trace3];
 
-//         var layout3 = {
-//           title: `LSE Tech Stock: ${chosen_s3}`,
-//           yaxis: {
-//             autorange: true,
-//           },
-//           xaxis: {
-//             autorange: true,
-//           },
-//         };
+        var layout3 = {
+          title: `OTC Tech Stock: ${chosen_s3}`,
+          yaxis: {
+            autorange: true,
+          },
+          xaxis: {
+            autorange: true,
+          },
+        };
 
-//         // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
-//         Plotly.newPlot("bar", barchart3, layout3);
+        // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
+        Plotly.newPlot("bar", barchart3, layout3);
         
-//       }
-//     });
-//   });
-// }
+      }
+    });
+  });
+}
 //////////////////////////////////////////////
 
 

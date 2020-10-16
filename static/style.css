@@ -106,7 +106,7 @@ select {
   padding: 20px;
   margin: 0;
   background: blue;
-  background-image: url("../Images/stock_market2.png");
+  background-image: url("Image/stock_market2.png");
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
@@ -239,6 +239,7 @@ select {
 
 .chart {
   max-height: calc(200px + 20px) !important;
+  max-width: calc(400px + 40px) !important;
   overflow:hidden;
 }
 
