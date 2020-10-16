@@ -199,7 +199,7 @@ function UpdateChart2(chosen_s2){
 function SE3_Change(){
   d3.json(url, function(data){
 
-    var SE3_stocks = [ "Choose a Stock", "AACAF", "ISNNY", "TTNDF" ]
+    var SE3_stocks = [ "Choose a Stock", "AACAF", "IFNNY", "TTNDF" ]
   
     // console.log(SE3_stocks);
     
