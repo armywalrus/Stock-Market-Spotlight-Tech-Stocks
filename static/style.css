@@ -10,6 +10,11 @@ body {
   margin: 0;
 }
 
+.myChart {
+  width="400"; 
+  height="400";
+}
+
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
   position: relative;
@@ -98,7 +103,7 @@ select {
   padding: 20px;
   margin: 0;
   background: blue;
-  background-image: url("images/stock_market2.png");
+  background-image: url("../Images/stock_market2.png");
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
