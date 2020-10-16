@@ -65,7 +65,7 @@ def index():
         output.append({
             'Stock Exchange' : s['Stock Exchange'],
             'Stock' : s['Stock'],
-            'Stock Ticker' : s['Stock Exchange'],
+            'Stock Ticker' : s['Stock Ticker'],
             'Date' : s['Date'],
             'Open' : s['Open'],
             'High' : s['High'],
@@ -76,6 +76,10 @@ def index():
             })
     return jsonify({'result' : output})
 
+@app.route('/')
+def home():
+    '''Main Dashboard Route.'''
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

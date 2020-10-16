@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Technology Stocks</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
       <div class="col-md-2">
         <div class="well">
           <h5>New York Stock Exchange:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select id="selDataset1" onchange="SE1_Change(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -39,13 +39,13 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div id="NYSE"></div>
+        <div id="bar" class = "myChart1"></div>
       </div>
 <!-- Dropdown and chart: LSE -->
       <div class="col-md-2">
         <div class="well">
           <h5>London Stock Exchange:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select id="selDataset2" onchange="SE2_Change(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div id="LSE"></div>
+        <div id="bar" class = "myChart2"></div>
       </div>
     </div>
     <!-- Dropdown and chart: OTC -->
@@ -65,7 +65,7 @@
       <div class="col-md-2">
         <div class="well">
           <h5>Over The Counter (OTC) Exchanges:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select id="selDataset3" onchange="SE3_Change(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div id="OTC"></div>
+        <div id="bar" class = "myChart3"></div>
       </div>
       <div class="col-md-3">
       </div>
@@ -85,7 +85,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="app.js"></script>
+  <script src="static/app.js"></script>
 </body>
 
 </html>
