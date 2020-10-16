@@ -1,5 +1,4 @@
 
-<canvas id="myChart" width="400" height="400"></canvas>
 
 * {
   box-sizing: border-box;
@@ -238,9 +237,12 @@ select {
 }
 
 .chart {
-  max-height: calc(200px + 20px) !important;
-  max-width: calc(400px + 40px) !important;
+  /* max-height: calc(800px + 80px) !important;
+  max-width: calc(1600px + 120px) !important; */
   overflow:hidden;
+  /* marker: {
+    color: 'rgb(194,21,2)'
+      }; */
 }
 
 {

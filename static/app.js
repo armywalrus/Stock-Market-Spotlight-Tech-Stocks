@@ -77,13 +77,19 @@ function UpdateChart1(chosen_s1){
           y: close_price1,
           type: "bar",
           text: close_price1,
+          marker: {
+            color: 'rgb(255,26,0)',
+            line: {
+              color:'rgb(255,26,0)',
+              width: 1
+            }
+          },
           transforms: [{
               type: 'sort',
               target: 'x',
               order: 'ascending'
             }],
-        };
-
+    }
         var barchart1 = [trace1];
 
         var layout1 = {
@@ -165,6 +171,13 @@ function UpdateChart2(chosen_s2){
           y: close_price2,
           type: "bar",
           text: close_price2,
+          marker: {
+            color: 'rgb(255,26,0)',
+            line: {
+              color:'rgb(255,26,0)',
+              width: 1
+            }
+          },
           transforms: [{
               type: 'sort',
               target: 'x',
@@ -175,16 +188,15 @@ function UpdateChart2(chosen_s2){
         var barchart2 = [trace2];
 
         var layout2 = {
-          title: `LSE Tech Stock: ${chosen_s2}`,
-          yaxis: {
-            autorange: true,
-          },
-          xaxis: {
-            autorange: true,
-          },
-        };
-
-        // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
+            title: `LSE Tech Stock: ${chosen_s3}`,
+            yaxis: {
+              autorange: true,
+            },
+            xaxis: {
+              autorange: true,
+            },
+          };
+          // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
         Plotly.newPlot("bar", barchart2, layout2);
         
       }
@@ -253,6 +265,13 @@ function UpdateChart3(chosen_s3){
           y: close_price3,
           type: "bar",
           text: close_price3,
+          marker: {
+            color: 'rgb(255,26,0)',
+            line: {
+              color:'rgb(255,26,0)',
+              width: 1
+            }
+          },
           transforms: [{
               type: 'sort',
               target: 'x',
@@ -281,4 +300,45 @@ function UpdateChart3(chosen_s3){
 }
 //////////////////////////////////////////////
 
+// ChartJS
 
+
+new Chart(document.getElementById("line-chart"), {
+    type: 'line',
+    data: {
+      labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+      datasets: [{ 
+          data: [86,114,106,106,107,111,133,221,783,2478],
+          label: "Africa",
+          borderColor: "#3e95cd",
+          fill: false
+        }, { 
+          data: [282,350,411,502,635,809,947,1402,3700,5267],
+          label: "Asia",
+          borderColor: "#8e5ea2",
+          fill: false
+        }, { 
+          data: [168,170,178,190,203,276,408,547,675,734],
+          label: "Europe",
+          borderColor: "#3cba9f",
+          fill: false
+        }, { 
+          data: [40,20,10,16,24,38,74,167,508,784],
+          label: "Latin America",
+          borderColor: "#e8c3b9",
+          fill: false
+        }, { 
+          data: [6,3,2,2,7,26,82,172,312,433],
+          label: "North America",
+          borderColor: "#c45850",
+          fill: false
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'World population per region (in millions)'
+      }
+    }
+  });
