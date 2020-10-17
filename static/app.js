@@ -1,6 +1,6 @@
 ////////////////////////////////////////
 /// Restful API
-const url = "http://127.0.0.1:5000/tech_stocks";
+const url = "http://stockmarketspotlight.herokuapp.com/tech_stocks";
 
 
 
