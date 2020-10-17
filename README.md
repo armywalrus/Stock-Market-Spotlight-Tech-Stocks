@@ -1,6 +1,6 @@
 ### Project Title
 ## Stock Market Spotlight: Tech Stocks
-<a href=https://stockmarketspotlight.herokuapp.com/">Deployed Application</a>
+<a href="https://stockmarketspotlight.herokuapp.com">Deployed Application</a>
 <br>
 <a href="https://github.com/armywalrus/Stock-Market-Spotlight-Tech-Stocks.git">Repo</a>
 
