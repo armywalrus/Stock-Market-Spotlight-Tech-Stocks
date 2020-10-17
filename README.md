@@ -1,6 +1,7 @@
 ### Project Title
 ## Stock Market Spotlight: Tech Stocks
 <a href="https://github.com/armywalrus/Stock-Market-Spotlight-Tech-Stocks.git">Deployed Application</a>
+<br>
 <a href="https://github.com/armywalrus/Stock-Market-Spotlight-Tech-Stocks.git">Repo</a>
 
 ## Team Members
