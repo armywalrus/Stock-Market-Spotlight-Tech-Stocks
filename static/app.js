@@ -72,41 +72,43 @@ function UpdateChart1(chosen_s1){
         // console.log(dates)
         // console.log(close_price1)
 
-        var trace1 = {
-          x: SE1_stockdata,
-          y: close_price1,
-          type: "bar",
-          text: close_price1,
-          marker: {
-            color: 'rgb(255,26,0)',
-            line: {
-              color:'rgb(255,26,0)',
-              width: 1
-            }
-          },
-          transforms: [{
-              type: 'sort',
-              target: 'x',
-              order: 'ascending'
-            }],
-    }
-        var barchart1 = [trace1];
-
-        var layout1 = {
-          title: `NYSE Tech Stock: ${chosen_s1}`,
-          color: "#870814",
-          yaxis: {
-            autorange: true,
-          },
-          xaxis: {
-            autorange: true,
-          },
-        };
-
-        Plotly.newPlot("bar", barchart1, layout1);
         
       }
     });
+
+    var trace1 = {
+        x: SE1_stockdata,
+        y: close_price1,
+        type: "bar",
+        text: close_price1,
+        marker: {
+          color: 'rgb(255,26,0)',
+          line: {
+            color:'rgb(255,26,0)',
+            width: 1
+          }
+        },
+        transforms: [{
+            type: 'sort',
+            target: 'x',
+            order: 'ascending'
+          }],
+  }
+      var barchart1 = [trace1];
+
+      var layout1 = {
+        title: `NYSE Tech Stock: ${chosen_s1}`,
+        color: "#870814",
+        yaxis: {
+          autorange: true,
+        },
+        xaxis: {
+          autorange: true,
+        },
+      };
+
+      Plotly.newPlot("bar", barchart1, layout1);
+
   });
 }
 //////////////////////////////////////////////
@@ -165,42 +167,43 @@ function UpdateChart2(chosen_s2){
 
         // console.log(dates)
         // console.log(close_price1)
-
-        var trace2 = {
-          x: SE2_stockdata,
-          y: close_price2,
-          type: "bar",
-          text: close_price2,
-          marker: {
-            color: 'rgb(255,26,0)',
-            line: {
-              color:'rgb(255,26,0)',
-              width: 1
-            }
-          },
-          transforms: [{
-              type: 'sort',
-              target: 'x',
-              order: 'ascending'
-            }],
-        };
-
-        var barchart2 = [trace2];
-
-        var layout2 = {
-        title: `LSE Tech Stock: ${chosen_s2}`,
-        yaxis: {
-            autorange: true,
-        },
-        xaxis: {
-            autorange: true,
-        },
-        };
-          // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
-        Plotly.newPlot("bar", barchart2, layout2);
         
       }
     });
+    
+    var trace2 = {
+        x: SE2_stockdata,
+        y: close_price2,
+        type: "bar",
+        text: close_price2,
+        marker: {
+          color: 'rgb(255,26,0)',
+          line: {
+            color:'rgb(255,26,0)',
+            width: 1
+          }
+        },
+        transforms: [{
+            type: 'sort',
+            target: 'x',
+            order: 'ascending'
+          }],
+      };
+
+      var barchart2 = [trace2];
+
+      var layout2 = {
+      title: `LSE Tech Stock: ${chosen_s2}`,
+      yaxis: {
+          autorange: true,
+      },
+      xaxis: {
+          autorange: true,
+      },
+      };
+        // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
+      Plotly.newPlot("bar", barchart2, layout2);
+
   });
 }
 //////////////////////////////////////////////
@@ -260,42 +263,43 @@ function UpdateChart3(chosen_s3){
         // console.log(dates)
         // console.log(close_price1)
 
-        var trace3 = {
-          x: SE3_stockdata,
-          y: close_price3,
-          type: "bar",
-          text: close_price3,
-          marker: {
-            color: 'rgb(255,26,0)',
-            line: {
-              color:'rgb(255,26,0)',
-              width: 1
-            }
-          },
-          transforms: [{
-              type: 'sort',
-              target: 'x',
-              order: 'ascending'
-            }],
-        };
-
-        var barchart3 = [trace3];
-
-        var layout3 = {
-          title: `OTC Tech Stock: ${chosen_s3}`,
-          yaxis: {
-            autorange: true,
-          },
-          xaxis: {
-            autorange: true,
-          },
-        };
-
-        // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
-        Plotly.newPlot("bar", barchart3, layout3);
         
       }
     });
+    var trace3 = {
+        x: SE3_stockdata,
+        y: close_price3,
+        type: "bar",
+        text: close_price3,
+        marker: {
+          color: 'rgb(255,26,0)',
+          line: {
+            color:'rgb(255,26,0)',
+            width: 1
+          }
+        },
+        transforms: [{
+            type: 'sort',
+            target: 'x',
+            order: 'ascending'
+          }],
+      };
+
+      var barchart3 = [trace3];
+
+      var layout3 = {
+        title: `OTC Tech Stock: ${chosen_s3}`,
+        yaxis: {
+          autorange: true,
+        },
+        xaxis: {
+          autorange: true,
+        },
+      };
+
+      // NOTE: I BELIEVE "BAR" HAS TO BE THE SAME FOR THE TYPE ABOVE AND THE HTML ID //
+      Plotly.newPlot("bar", barchart3, layout3);
+
   });
 }
 //////////////////////////////////////////////
